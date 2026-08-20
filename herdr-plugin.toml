@@ -1,0 +1,39 @@
+id = "herder-gh-checks"
+name = "GH Checks"
+version = "0.2.0"
+min_herdr_version = "0.7.0"
+description = "Watch the current PR's CI (5s) in a pane; CI/merge status on sidebar space rows. Go + Charm."
+platforms = ["linux", "macos"]
+
+# `plugin install` builds the binary; `plugin link` does not (build it yourself: go build -o herder-gh-checks .).
+[[build]]
+command = ["go", "build", "-o", "herder-gh-checks", "."]
+
+[[startup]]
+command = ["./herder-gh-checks", "--sidebar"]
+
+[[panes]]
+id = "panel"
+title = "GH Checks"
+placement = "split"
+command = ["./herder-gh-checks"]
+
+[[actions]]
+id = "show"
+title = "Watch PR CI"
+contexts = ["workspace"]
+command = ["./herder-gh-checks"]
+
+[[panes]]
+id = "merge"
+title = "Merge PR"
+placement = "popup"
+width = 80
+height = 22
+command = ["./herder-gh-checks", "--merge"]
+
+[[actions]]
+id = "merge"
+title = "Merge PR"
+contexts = ["workspace"]
+command = ["./herder-gh-checks"]

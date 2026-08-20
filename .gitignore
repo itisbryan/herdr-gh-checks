@@ -1,0 +1,6 @@
+# compiled binary (same name as the module/folder)
+/herder-gh-checks
+
+# OS / editor cruft
+.DS_Store
+*.swp
