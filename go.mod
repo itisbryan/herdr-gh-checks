@@ -1,4 +1,4 @@
-module herder-gh-checks
+module herdr-gh-checks
 
 go 1.25.2
 

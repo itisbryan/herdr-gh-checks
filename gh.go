@@ -350,7 +350,7 @@ func listBranches(cwd string) []string {
 }
 
 func herdrBin() string { return env("HERDR_BIN_PATH", "herdr") }
-func pluginID() string { return env("HERDR_PLUGIN_ID", "herder-gh-checks") }
+func pluginID() string { return env("HERDR_PLUGIN_ID", "herdr-gh-checks") }
 func ciCwd() string {
 	if c := os.Getenv("CI_CWD"); c != "" {
 		return c

@@ -28,13 +28,13 @@
 From GitHub (builds the binary from source):
 
 ```bash
-herdr plugin install itisbryan/herder-gh-checks
+herdr plugin install itisbryan/herdr-gh-checks
 ```
 
 Or link a local checkout for development:
 
 ```bash
-cd herder-gh-checks && go build -o herder-gh-checks . && herdr plugin link .
+cd herdr-gh-checks && go build -o herdr-gh-checks . && herdr plugin link .
 ```
 
 Discoverable through the [Herdr plugin marketplace](https://herdr.dev/plugins/) via the `herdr-plugin` GitHub topic. Marketplace listings are automatic and are not endorsements or security reviews.
@@ -45,7 +45,7 @@ Open the pane on a workspace whose cwd is a GitHub repo (or worktree):
 
 ```bash
 herdr plugin pane open \
-  --plugin herder-gh-checks \
+  --plugin herdr-gh-checks \
   --entrypoint panel \
   --placement split \
   --direction right
@@ -59,7 +59,7 @@ herdr keybindings live in the user's config, not the plugin manifest. Add one to
 [[keys.command]]
 key = "prefix+i"
 type = "plugin_action"
-command = "herder-gh-checks.show"   # <plugin_id>.<action_id> — a dot, not a slash
+command = "herdr-gh-checks.show"   # <plugin_id>.<action_id> — a dot, not a slash
 description = "open GH Checks"
 ```
 
@@ -99,7 +99,7 @@ rows = [
 Run the status daemon in the background so the tokens stay fresh:
 
 ```bash
-nohup ./herder-gh-checks/herder-gh-checks --sidebar &
+nohup ./herdr-gh-checks/herdr-gh-checks --sidebar &
 ```
 
 ## License

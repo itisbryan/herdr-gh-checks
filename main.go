@@ -183,7 +183,7 @@ var glyph = map[string]string{"pass": "\uf42e", "fail": "\uf467", "merged": "\uf
 var cspin = []rune("\u25d0\u25d3\u25d1\u25d2")
 
 func meta(id string, extra ...string) {
-	args := append([]string{"workspace", "report-metadata", id, "--source", "herder-gh-checks"}, extra...)
+	args := append([]string{"workspace", "report-metadata", id, "--source", "herdr-gh-checks"}, extra...)
 	_ = exec.Command(herdrBin(), args...).Run()
 }
 
