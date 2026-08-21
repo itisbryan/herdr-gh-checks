@@ -19,13 +19,14 @@
 ## Requirements
 
 - **herdr ≥ 0.7.0** (the plugin system)
-- **`gh`** (authenticated: `gh auth status`), **`git`**, **`nvim`**, and **Go 1.25+** on your `PATH`
+- **`gh`** (authenticated: `gh auth status`), **`git`**, and **`nvim`** on your `PATH`
 - A **Nerd Font** for the sidebar glyphs
-- **macOS or Linux**
+- **macOS or Linux** (amd64 / arm64)
+- **Go 1.25+** only if building from source — `plugin install` downloads a prebuilt binary when a matching release exists
 
 ## Install
 
-From GitHub (builds the binary from source):
+From GitHub (downloads a prebuilt binary for your platform; builds from source only if there's no matching release):
 
 ```bash
 herdr plugin install itisbryan/herdr-gh-checks
