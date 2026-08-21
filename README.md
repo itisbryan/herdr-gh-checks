@@ -21,7 +21,7 @@
 - **herdr ≥ 0.7.0** (the plugin system)
 - **`gh`** (authenticated: `gh auth status`), **`git`**, and **`nvim`** on your `PATH`
 - A **Nerd Font** for the sidebar glyphs
-- **macOS or Linux** (amd64 / arm64)
+- **macOS or Linux** (amd64 / arm64). **Windows via WSL** (installs the Linux build normally); native Windows binaries are attached to each [release](https://github.com/itisbryan/herdr-gh-checks/releases) for git-bash / manual use.
 - **Go 1.25+** only if building from source — `plugin install` downloads a prebuilt binary when a matching release exists
 
 ## Install

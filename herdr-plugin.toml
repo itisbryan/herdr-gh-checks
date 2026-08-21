@@ -1,6 +1,6 @@
 id = "herdr-gh-checks"
 name = "GH Checks"
-version = "0.2.0"
+version = "0.2.1"
 min_herdr_version = "0.7.0"
 description = "Watch the current PR's CI (5s) in a pane; CI/merge status on sidebar space rows. Go + Charm."
 platforms = ["linux", "macos"]
