@@ -1,15 +1,20 @@
 id = "herdr-gh-checks"
 name = "GH Checks"
-version = "0.2.1"
+version = "0.2.2"
 min_herdr_version = "0.7.0"
 description = "Watch the current PR's CI (5s) in a pane; CI/merge status on sidebar space rows. Go + Charm."
-platforms = ["linux", "macos"]
+platforms = ["linux", "macos", "windows"]
 
-# `plugin install` runs this fetch-or-build step: it downloads the prebuilt binary matching this
-# version for your OS/arch (verifying SHA-256), and only compiles from source if there is no match
-# (needs Go). `plugin link` skips it — for local dev, build it yourself: go build -o herdr-gh-checks .
+# `plugin install` runs the host-matching fetch-or-build step: it downloads the prebuilt binary for
+# your OS/arch (verifying SHA-256), and only compiles from source if there is no match (needs Go).
+# `plugin link` skips it — for local dev, build it yourself: go build -o herdr-gh-checks .
 [[build]]
+platforms = ["linux", "macos"]
 command = ["/bin/sh", "scripts/fetch-or-build.sh"]
+
+[[build]]
+platforms = ["windows"]
+command = ["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "scripts/fetch-or-build.ps1"]
 
 [[startup]]
 command = ["./herdr-gh-checks", "--sidebar"]

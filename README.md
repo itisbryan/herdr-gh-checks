@@ -21,7 +21,8 @@
 - **herdr ≥ 0.7.0** (the plugin system)
 - **`gh`** (authenticated: `gh auth status`), **`git`**, and **`nvim`** on your `PATH`
 - A **Nerd Font** for the sidebar glyphs
-- **macOS or Linux** (amd64 / arm64). **Windows via WSL** (installs the Linux build normally); native Windows binaries are attached to each [release](https://github.com/itisbryan/herdr-gh-checks/releases) for git-bash / manual use.
+- **macOS or Linux** (amd64 / arm64).
+- **Windows**: `herdr plugin install` downloads the native `.exe` (no Go). The pane shells out to `sh`/`git`/`nvim`, so you need **git-bash / MSYS2 `sh` on `PATH`** for the diff & review features. **WSL is the simplest path** (installs the Linux build, everything just works) and native-Windows launch is not yet verified on real hardware — report issues.
 - **Go 1.25+** only if building from source — `plugin install` downloads a prebuilt binary when a matching release exists
 
 ## Install
